@@ -2,7 +2,7 @@
 	<head>
 		<title>Xenon Stack Github App</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="styles/style.css" />
 	</head>
 	<body class="container" ng-controller="mainController">
 
@@ -22,7 +22,7 @@
             <label>Repo Name</label>
             <input type="text" name="name" placeholder="eg: dumbstark,mojombo,defunkt" class="form-control" ng-model="user.name"  required>
 
-            <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block"> For fuck sake why you removed the name .Fucking enter it otherwise i wont submit it. Ukhad le jo ukhadna he</p>
+            <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block"> Oops! Repo Name is Compulsory..</p>
         </div>
 
 
@@ -52,7 +52,7 @@
 
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
 		<script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
-		<script src="index.js"></script>
-		<script src="app.js"></script>
+		<script src="script/index.js"></script>
+		<script src="script/app.js"></script>
 	</body>
 </html>
