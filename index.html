@@ -1,0 +1,58 @@
+<html ng-app='RepoApp' >
+	<head>
+		<title>Xenon Stack Github App</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="container" ng-controller="mainController">
+
+
+	<h2 style="text-align:center"><i>  Please Enter Repo Name to fetch its Stat</i> </h2>
+
+		<div class="container" >
+<div class="row">
+
+<div class="col-sm-6" style="margin-left:24%;margin-top:50px;margin-bottom:10%">
+    <!-- FORM ============ -->
+
+    <form name="userForm" ng-submit="getdata(user.name)" novalidate>
+
+        <!-- REPO NAME -->
+        <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+            <label>Repo Name</label>
+            <input type="text" name="name" placeholder="eg: dumbstark,mojombo,defunkt" class="form-control" ng-model="user.name"  required>
+
+            <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block"> For fuck sake why you removed the name .Fucking enter it otherwise i wont submit it. Ukhad le jo ukhadna he</p>
+        </div>
+
+
+
+
+
+
+        <button class="btn btn-primary" ng-disabled="userForm.$invalid">Submit</button>
+
+    </form>
+
+
+
+
+
+    <div class="container">
+    <div ui-view></div>
+</div>
+
+
+
+
+  </div>
+
+</div>
+</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+		<script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+		<script src="index.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>
