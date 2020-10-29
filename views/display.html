@@ -2,7 +2,8 @@
 
 
 <ul class="list-group shyam col-md-8">
-  <li class="list-group-item" ng-repeat="(key, value) in mydata"><strong>{{key}} :</strong> <a ui-sref="data">{{value}}</a></li>
-
-
+  <li class="list-group-item" ng-repeat="key in mydata">
+    <strong>{{key}} :</strong> 
+    <a ui-sref="data">{{mydata[key]}}</a>
+  </li>
 </ul>
